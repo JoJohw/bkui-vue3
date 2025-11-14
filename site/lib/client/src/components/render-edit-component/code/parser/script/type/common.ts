@@ -10,7 +10,7 @@ import {
   BKUI_PATH,
   BREAK_LINE,
   ICON_IMPORT_PATH,
-  typeForVue,
+  typeFromVue,
 } from "../../../constant";
 
 import {
@@ -121,7 +121,7 @@ export const createCommonScript = (
       const linkParams = allTypes.filter(type => allComponentTypes.includes(type));
       
       // 4. vueParams: 匹配typeForVue
-      const vueParams = allTypes.filter(type => typeForVue.includes(type));
+      const vueParams = allTypes.filter(type => typeFromVue.includes(type));
       
       // 去重
       const uniqueLinkParams = Array.from(new Set(linkParams));
@@ -156,7 +156,6 @@ export const createCommonScript = (
   }
   return `${importDepend}${finalVariables}${eventList}${lastLine}`;
 };
-
 
 // 根据props生成响应式变量
 const createRefVariables = (

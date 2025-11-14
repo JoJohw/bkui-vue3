@@ -1,17 +1,17 @@
 import {
   IComponentWiki,
-  IEmit,
   IProp,
 } from "@/types/component";
 import {
   BREAK_LINE,
   INDENT,
-  typeForVue,
 } from "../../constant";
 import {
   toPascalCase,
 } from "../template/template-parser";
-import { camelToSnakeCase } from "@/utils";
+import {
+  camelToSnakeCase,
+} from "@/utils";
 
 export interface DependentData {
   list: string[];
